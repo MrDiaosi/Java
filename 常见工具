@@ -1,0 +1,33 @@
+javac 编译
+java 运行（控制台及图形用户界面）
+javaw 运行图形界面程序
+appletViewer 运行applet程序
+
+jar 打包工具(jar文件实际上是一个压缩文件，zip格式的)
+javadoc 生成文档
+Javap 查看类信息及反汇编
+
+jar打包
+1.编译 javac A.java
+2.打包 jar cvfm A.jar A.man A.class(c表示创建create,v表示详情verbose,f表示指定文件名，m表示清单文件)
+3.运行 java -jar A.jar
+
+A.man 是清单文件（manifest），内容如下：
+Manifest-Version: 1.0
+Class-Path:
+Main-Class:A
+PS:清单文件可以任意命名，常见的使用MANIFEST.MF
+
+javadoc生成文档
+javadoc -d 目录 xxx.java
+/** */有以下标记
+@author 对类的说明，标明模块开发作者
+@version 对类的说明，标明模块版本
+@see 对类/属性/方法的说明，参考转向，也就是相关主题
+@param 对方法的说明，对方法中某参数的说明
+@return 对方法的说明，对方法返回值的说明
+@exception 对方法的说明，对方法可能抛出的异常进行说明
+
+javap使用
+javap 类名 查看类信息
+javap -c 类名 反汇编
