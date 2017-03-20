@@ -1,0 +1,32 @@
+Scanner类
+
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int a = in.nextInt();//in.next()表示读进一个单词，in.nextDouble()表示读进一个实数，in.next()表示读进一个单词
+    System.out.println(a);
+    System.out.print(a);//与println()区别是输出后不会换行
+    System.out.printf("$d的平方是%d",a,a*a);//printf()按格式化输出
+  }
+}
+
+Scanner java1.5后才出现，之前使用in及out
+java.io包
+System.in.read()
+System.out.print()//println(),printf()
+
+1.读入一个字符
+char c='';
+System.out.print("Please input a char: ");
+try{
+  c = (char)System.in.read();//得到一个字符
+} catch(IOException e) {}
+System.out.println("You have entered: "+c);
+
+2.读入一串字符
+try{
+  BufferReader in = new BufferReader(new InputStreamReader(System.in));
+  s=in.readLine();
+} catech(IOException e) {}
+n=Integer.parseInt(s);//将字符串s解析成整数，Double.parseDouble()同理实数
