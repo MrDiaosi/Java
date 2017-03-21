@@ -1,0 +1,12 @@
+1.基本数据类型:字符型char，布尔型boolean，数值型  =>变量在栈，赋值时复制的是值
+2.引用类型：类class，接口interface，数组  =>变量引用到堆，赋值时复制的是引用
+
+Java基本数据类型：四类八种基本数据类型:
+1.整数型：byte1，short2,int4,long8
+2.浮点数类型：float4，double8
+3.逻辑型：boolean(判断时只允许取值true/false，不允许用数字)
+4.字符型：char,java采用Unicode编码，每个字符占两个字节
+八进制：0开头，027
+十六进制：0x或0X开头，0x19A
+二进制：0b或0B开头，0b01101
+Java中没有无符号数，可以用long来处理无符号整数，uint
